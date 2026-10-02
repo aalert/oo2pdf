@@ -202,6 +202,13 @@ pip install -e .[dev]
 python -m pytest
 ```
 
+Or with [uv](https://docs.astral.sh/uv/), using the pinned versions in `uv.lock`:
+
+```bash
+uv sync --extra dev
+uv run pytest
+```
+
 The unit tests need neither Office nor any external document: they build small
 documents with python-docx/openpyxl and check the layout rules listed above.
 
