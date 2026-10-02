@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oo2pdf"
+version = "0.1.0"
+description = "Pure-Python DOCX/XLSX to PDF engine that follows Microsoft Office layout rules"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["docx", "xlsx", "pdf", "word", "excel", "ooxml", "converter"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "lxml>=4.9",
+    "openpyxl>=3.1",
+    "reportlab>=4.0",
+    "fonttools>=4.40",
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pymupdf>=1.24", "python-docx>=1.1", "pytest>=8"]
+
+[project.scripts]
+oo2pdf = "oo2pdf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

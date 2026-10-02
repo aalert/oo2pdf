@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# Personal test documents (CVs, private files) and their outputs: never commit
+my_tests/
+
+# Microsoft Office's bundled templates and their reference PDFs (Microsoft content)
+tests/corpus/
+
+# Generated outputs
+tests/fixtures/out/
+tests/fixtures/sample.png
+out/
+*.ours.pdf
+
+# Editors / OS
+.vscode/
+.idea/
+.claude/
+Thumbs.db
+.DS_Store
